@@ -6,11 +6,11 @@ const ContactPage = () => {
   return (
     <Layout>
       <h1>Contact Me</h1>
-      <b>
-        InstaGram: <Link to="https://www.instagram.com">@kanishk198</Link>
-      </b>{" "}
-      <br></br>
-      <b>Facebook: Kanishk Singh</b>
+      <p>
+        <b>InstaGram:</b>{" "}
+        <Link to="https://www.instagram.com">@kanishk198</Link> <br></br>
+        <b>Facebook:</b> Kanishk Singh
+      </p>{" "}
     </Layout>
   )
 }

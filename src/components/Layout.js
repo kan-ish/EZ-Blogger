@@ -1,12 +1,15 @@
 import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
+import * as layoutStyles from "./layout.module.scss"
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <Header />
-      {children}
+    <div className={layoutStyles.container}>
+      <div className={layoutStyles.content}>
+        <Header />
+        {children}
+      </div>
       <Footer />
     </div>
   )
