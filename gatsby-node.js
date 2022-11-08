@@ -13,3 +13,40 @@ module.exports.onCreateNode = ({ node, actions }) => {
     })
   }
 }
+
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const blogTemplate = path.resolve("./src/templates/blogTemplate.js")
+
+  const res = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+            }
+            html
+            excerpt
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    // console.log(edge.node.fields.slug)
+
+    createPage({
+      component: blogTemplate,
+      path: `/blog/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
+}
