@@ -10,7 +10,8 @@ const ContactPage = () => {
       <h1>Contact Me</h1>
       <p>
         <b>InstaGram:</b>{" "}
-        <Link to="https://www.instagram.com">@kanishk198</Link> <br></br>
+        <Link to="https://www.instagram.com/kanishk198/">@kanishk198</Link>{" "}
+        <br></br>
         <b>Facebook:</b> Kanishk Singh
       </p>{" "}
     </Layout>
