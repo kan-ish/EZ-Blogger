@@ -10,6 +10,7 @@ module.exports = {
     author: "Kanishk Singh",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -17,7 +18,7 @@ module.exports = {
         accessToken: process.env.ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {

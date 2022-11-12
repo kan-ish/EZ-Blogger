@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import * as blogStyles from "./blogs.module.scss"
+import Head from "../components/Head"
 
 const BlogPage = () => {
   // query for posts from Contentful
@@ -21,6 +22,7 @@ const BlogPage = () => {
 
   return (
     <Layout>
+      <Head title="Blogs" />
       <h1>My Blog Page</h1>
       <p>This is where all blogs will show up.</p>
       <ol className={blogStyles.allPosts}>

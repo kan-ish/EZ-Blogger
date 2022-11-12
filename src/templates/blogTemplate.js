@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import Head from "../components/Head"
 
 // Following code is for querying blogposts coming from Contentful.
 export const blogData = graphql`
@@ -39,6 +40,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <Head title={data.contentfulBlogPost.title} />
       <h1>{data.contentfulBlogPost.title}</h1>
       <p>{data.contentfulBlogPost.date}</p>
       <p>{renderRichText(data.contentfulBlogPost.body, options)}</p>
