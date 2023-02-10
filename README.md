@@ -8,6 +8,11 @@
   A Gatsby-Contentful Blogsite
 </h1>
 
+## It's Live!
+
+Check it out on https://www.kanishk-singh.dev/
+Styles coming soon!
+
 ## 🚀 Quick start
 
 1.  **Create your own Gatsby-Contentful blogsite.**
