@@ -10,7 +10,7 @@
 
 ## It's Live!
 
-Check it out on https://www.kanishk-singh.dev/
+Check it out on https://www.kanishksingh.dev/
 Styles coming soon!
 
 ## 🚀 Quick start
